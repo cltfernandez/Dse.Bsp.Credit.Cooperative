@@ -1,0 +1,204 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "Loan.Application.Database"
+   MSDTVersion = "80"
+   DefDBRef = "kbcidbsvr01.KBCI.dbo"
+   Begin Folder = "ChangeScripts"
+      Script = "PostInstall.sql"
+      Script = "PreInstall.sql"
+   End
+   Begin Folder = "CreateScripts"
+      Begin Folder = "Functions"
+         Begin Folder = "Scalar"
+            Script = "func_Age.sql"
+            Script = "func_Balance.sql"
+            Script = "func_EOD_NDue.sql"
+            Script = "func_Format241.sql"
+            Script = "func_Format451.sql"
+            Script = "func_FormatCCYYMMDD.sql"
+            Script = "func_FullName.sql"
+            Script = "func_GetLockingUser.sql"
+            Script = "func_GoDue.sql"
+            Script = "func_J_AMORT.sql"
+            Script = "func_J_Parterm.sql"
+            Script = "func_J_Preterm.sql"
+            Script = "func_J_Preterm_LRI.sql"
+            Script = "func_NumberToWord.sql"
+         End
+         Begin Folder = "Table"
+            Script = "func_Balance.sql"
+            Script = "func_BalanceAsOf.sql"
+            Script = "func_PaymentOrder.sql"
+            Script = "func_StringToRows.sql"
+         End
+      End
+      Begin Folder = "StoredProcedures"
+         Begin Folder = "NonQuery"
+            Begin Folder = "Administration"
+               Script = "sp_AdminDate.sql"
+               Script = "sp_Archive.sql"
+               Script = "sp_Close.sql"
+               Script = "sp_DailyReversion.sql"
+               Script = "sp_EndOfDay.sql"
+               Script = "sp_ExtractInterest.sql"
+               Script = "sp_Open.sql"
+               Script = "sp_TagReport.sql"
+            End
+            Begin Folder = "Loans"
+               Begin Folder = "AdjustingEntries"
+                  Script = "s3p_Loans_LoanAdjustringEntries_Arrears.sql"
+                  Script = "s3p_Loans_LoanAdjustringEntries_LRIDUE.sql"
+               End
+               Begin Folder = "Payment"
+                  Begin Folder = "Members"
+                     Script = "s3p_Loans_LoansPayment_GetFullAmount.sql"
+                     Script = "s3p_Loans_LoansPayment_ProcessPayment.sql"
+                  End
+                  Begin Folder = "Staff"
+                     Script = "s3p_Loans_LoanStaffPayment_Edit.sql"
+                     Script = "s3p_Loans_LoanStaffPayment_Extract.sql"
+                     Script = "s3p_Loans_LoanStaffPayment_Post.sql"
+                  End
+               End
+               Begin Folder = "Release"
+                  Script = "s3p_J_CORRLRI.sql"
+                  Script = "s3p_J_Gen_Lapp.sql"
+                  Script = "s3p_J_N_Proc.sql"
+                  Script = "s3p_J_Parterm.sql"
+                  Script = "s3p_J_Preterm.sql"
+                  Script = "s3p_J_U_Ledger.sql"
+                  Script = "s3p_Loans_LoansNew_Insert.sql"
+                  Script = "s3p_Loans_LoansNew_Insert_CTDHLON.sql"
+                  Script = "s3p_Loans_LoansNew_RecomputeBalance.sql"
+                  Script = "s3p_Loans_LoansNew_UpdateODEDBAL.sql"
+                  Script = "s3p_Loans_LoansNew_UpdateODEDBAL_PN.sql"
+                  Script = "s3p_Loans_LoansNew_UpdateSDEDBAL.sql"
+               End
+               Begin Folder = "Restructuring"
+                  Script = "s3p_Loans_LoanRestructuring.sql"
+               End
+               Begin Folder = "Reversion"
+                  Script = "s3p_Loans_LoanReversion.sql"
+               End
+            End
+            Begin Folder = "Lri"
+               Script = "s3p_Others_LriMaintenance_Divref2_HoldLri.sql"
+               Script = "s3p_Others_LriMaintenance_Divref2_Post.sql"
+               Script = "s3p_Others_LriMaintenance_Payment.sql"
+            End
+            Begin Folder = "Maintenance"
+               Script = "s3p_MT_LRIDUE_Update.sql"
+               Script = "s3p_MT_Member_Insert.sql"
+               Script = "sp_Update_LoanStatement.sql"
+            End
+            Begin Folder = "Others"
+               Script = "s3p_SD_SP.sql"
+               Script = "s3p_usp_UpdateChklist.sql"
+               Script = "s3p_util_compare.sql"
+            End
+            Begin Folder = "Payroll"
+               Script = "s3p_Payroll_AdvancePayments.sql"
+               Script = "s3p_Payroll_Generate_Feed.sql"
+               Script = "s3p_Payroll_Generate_Stop.sql"
+               Script = "s3p_Payroll_Others_Process.sql"
+               Script = "s3p_Payroll_Others_Process_Insert.sql"
+               Script = "s3p_Payroll_Process.sql"
+               Script = "s3p_Payroll_Process_Insert.sql"
+               Script = "sp_Do_Payroll_Generate.sql"
+            End
+         End
+         Begin Folder = "Query"
+            Begin Folder = "Report"
+               Begin Folder = "Adhoc"
+                  Script = "sp_MiscellaneousLiability.sql"
+                  Script = "sp_MissedPayments.sql"
+                  Script = "sp_Philam.sql"
+                  Script = "sp_Refund_1.sql"
+                  Script = "sp_Remit_1.sql"
+                  Script = "sp_Runup_1.sql"
+                  Script = "sp_TotalExposure.sql"
+               End
+               Begin Folder = "Admin"
+                  Script = "sp_DailyTransactionRegister.sql"
+                  Script = "sp_DailyTransactionRegisterDetails.sql"
+                  Script = "sp_DailyTransactionRegisterSummary.sql"
+                  Script = "sp_FullyPaidLoans.sql"
+                  Script = "sp_InterestDetails.sql"
+                  Script = "sp_InterestSummary.sql"
+                  Script = "sp_MonthlyRunup.sql"
+                  Script = "sp_ReleasedLoans.sql"
+                  Script = "sp_ReversedTransactionRegisterDetails.sql"
+                  Script = "sp_ReversedTransactionRegisterSummary.sql"
+               End
+               Begin Folder = "CashDividend"
+                  Script = "sp_Register.sql"
+               End
+               Begin Folder = "Loans"
+                  Script = "sp_AmortizationSchedule_1.sql"
+                  Script = "sp_CashDisbursementOrder.sql"
+                  Script = "sp_FullyPaidLoans.sql"
+                  Script = "sp_KbciDeductionRegister.sql"
+                  Script = "sp_LoanArrears.sql"
+                  Script = "sp_LoanPaymentOrder.sql"
+                  Script = "sp_LoansDue.sql"
+                  Script = "sp_PaymentRegister.sql"
+                  Script = "sp_PreterminatedLoans.sql"
+                  Script = "sp_ReleasedLoans.sql"
+                  Script = "sp_RestructuredLoans.sql"
+                  Script = "sp_SavingsAccountTransactionRegister.sql"
+                  Script = "sp_StaffPayment.sql"
+                  Script = "sp_SubsidiaryLoanLedger.sql"
+                  Script = "sp_TransactionSchedule.sql"
+               End
+               Begin Folder = "Lri"
+                  Script = "sp_Collection.sql"
+                  Script = "sp_Deduction.sql"
+                  Script = "sp_Due.sql"
+               End
+               Begin Folder = "Maintenance"
+                  Script = "sp_LoansMonitoring_1.sql"
+                  Script = "sp_LoansStatement.sql"
+                  Script = "sp_OutstandingBalance.sql"
+                  Script = "sp_OutstandingBalanceAsOf.sql"
+                  Script = "sp_ProcessingSheet.sql"
+               End
+               Begin Folder = "Members"
+                  Script = "sp_List.sql"
+               End
+               Begin Folder = "PaymentOrder"
+                  Script = "sp_Loans.sql"
+                  Script = "sp_Lri.sql"
+               End
+               Begin Folder = "Payroll"
+                  Script = "sp_AdvancePayments.sql"
+                  Script = "sp_Advice.sql"
+                  Script = "sp_NoDeductionRegister.sql"
+                  Script = "sp_PayrollDeductionRegisterDetails.sql"
+                  Script = "sp_PayrollDeductionRegisterSummary.sql"
+                  Script = "sp_Stop.sql"
+               End
+               Begin Folder = "Voucher"
+                  Script = "sp_LoansPayment.sql"
+                  Script = "sp_PayrollDeduction.sql"
+                  Script = "sp_Release.sql"
+               End
+            End
+            Begin Folder = "System"
+               Script = "s3p_Common_GetDetails.sql"
+               Script = "s3p_Loans_GetDetails.sql"
+            End
+         End
+      End
+   End
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "kbcidbsvr01.KBCI.dbo"
+         ConnectStr = "Data Source=KBCIDBSVR01;Initial Catalog=KBCI;User ID=KBCIuser"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+      Begin DBRefNode = "makljosevilla2\sql2008r2.KBCI.dbo"
+         ConnectStr = "Data Source=MAKLJOSEVILLA2\SQL2008R2;Initial Catalog=KBCI;Integrated Security=True"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+   End
+End

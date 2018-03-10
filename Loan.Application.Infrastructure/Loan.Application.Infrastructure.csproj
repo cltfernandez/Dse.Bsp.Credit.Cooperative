@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5C96519-ECD5-4443-B015-8B4CF9039B65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loan.Application.Infrastructure</RootNamespace>
+    <AssemblyName>Loan.Application.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Interfaces.cs" />
+    <Compile Include="Business\Objects.cs" />
+    <Compile Include="Business\Popups.cs" />
+    <Compile Include="Controls\PropertyEditor\Editors.cs" />
+    <Compile Include="Controls\PropertyGrid\EnterNavigator.cs" />
+    <Compile Include="Enumerations\System.cs" />
+    <Compile Include="Forms\Popups\PopupButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupButtons.Designer.cs">
+      <DependentUpon>PopupButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupCalendar.Designer.cs">
+      <DependentUpon>PopupCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupDataGridOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupDataGridOptions.Designer.cs">
+      <DependentUpon>PopupDataGridOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupParameters.Designer.cs">
+      <DependentUpon>PopupParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupSearch.Designer.cs">
+      <DependentUpon>PopupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Windows\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Windows\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\Parser.cs" />
+    <Compile Include="Enumerations\DropDownItems.cs" />
+    <Compile Include="Enumerations\Sql.cs" />
+    <Compile Include="Enumerations\Popups.cs" />
+    <Compile Include="Enumerations\TabPages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\PropertyEditor\Converters.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Popups\PopupButtons.resx">
+      <DependentUpon>PopupButtons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupCalendar.resx">
+      <DependentUpon>PopupCalendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupDataGridOptions.resx">
+      <DependentUpon>PopupDataGridOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupParameters.resx">
+      <DependentUpon>PopupParameters.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupSearch.resx">
+      <DependentUpon>PopupSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Windows\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jc.Scripts\Jc.Scripts.csproj">
+      <Project>{FA2C8530-E23E-4BFA-A6C4-BB5C4847BD04}</Project>
+      <Name>Jc.Scripts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

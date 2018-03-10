@@ -1,0 +1,261 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B817ECF-AD20-4F14-B9B3-22D20C0E5099}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loan.Application.Report</RootNamespace>
+    <AssemblyName>Loan.Application.Report</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0 Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0 Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sources.cs" />
+    <Compile Include="Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adhoc\Arrears.rdlc" />
+    <EmbeddedResource Include="Adhoc\MiscellaneousLiability.rdlc" />
+    <EmbeddedResource Include="Adhoc\MissedPayments.rdlc" />
+    <EmbeddedResource Include="Adhoc\Philam.rdlc" />
+    <EmbeddedResource Include="Adhoc\Runup.rdlc" />
+    <EmbeddedResource Include="Admin\MonthlyRunupBreakdown.rdlc" />
+    <EmbeddedResource Include="Admin\MonthlyRunupConsolidation.rdlc" />
+    <EmbeddedResource Include="Admin\StaffPtlBalance.rdlc" />
+    <EmbeddedResource Include="Admin\TotalInterestPaidByRange.rdlc" />
+    <EmbeddedResource Include="Admin\InterestDetails.rdlc" />
+    <EmbeddedResource Include="Admin\InterestSummary.rdlc" />
+    <EmbeddedResource Include="Admin\MonthlyRunup.rdlc" />
+    <EmbeddedResource Include="Admin\DailyTransactionRegister.rdlc" />
+    <EmbeddedResource Include="Admin\DailyTransactionRegisterDetails.rdlc" />
+    <EmbeddedResource Include="Admin\DailyTransactionRegisterSummary.rdlc" />
+    <EmbeddedResource Include="Admin\ReleasedLoans.rdlc" />
+    <EmbeddedResource Include="Admin\FullyPaidLoans.rdlc" />
+    <EmbeddedResource Include="Admin\ReversedTransactionRegisterDetails.rdlc" />
+    <EmbeddedResource Include="Admin\ReversedTransactionRegisterSummary.rdlc" />
+    <EmbeddedResource Include="Admin\StaffPtlInterestPaid.rdlc" />
+    <EmbeddedResource Include="Admin\TotalInterestPaid.rdlc" />
+    <EmbeddedResource Include="CashDividend\Register.rdlc" />
+    <EmbeddedResource Include="Loans\AmortizationSchedule.rdlc" />
+    <EmbeddedResource Include="Loans\FullyPaidLoans.rdlc" />
+    <EmbeddedResource Include="Loans\PaymentRegister.rdlc" />
+    <EmbeddedResource Include="Loans\CashDisbursementOrder.rdlc" />
+    <EmbeddedResource Include="Loans\LoansDue.rdlc" />
+    <EmbeddedResource Include="Loans\ReleasedLoans.rdlc" />
+    <EmbeddedResource Include="Loans\SavingsAccountTransactionRegister.rdlc" />
+    <EmbeddedResource Include="Loans\RestructuredLoans.rdlc" />
+    <EmbeddedResource Include="Loans\PreterminatedLoans.rdlc" />
+    <EmbeddedResource Include="Loans\StaffPayment.rdlc" />
+    <EmbeddedResource Include="Loans\SubsidiaryLoanLedger.rdlc" />
+    <EmbeddedResource Include="Loans\TransactionSchedule.rdlc" />
+    <EmbeddedResource Include="Loans\LoanArrears.rdlc" />
+    <EmbeddedResource Include="Loans\KbciDeductionRegister.rdlc" />
+    <EmbeddedResource Include="Lri\Collection.rdlc" />
+    <EmbeddedResource Include="Lri\Deduction.rdlc" />
+    <EmbeddedResource Include="Lri\Due.rdlc" />
+    <EmbeddedResource Include="Maintenance\LoansStatement.rdlc" />
+    <EmbeddedResource Include="Maintenance\OutstandingBalance.rdlc" />
+    <EmbeddedResource Include="Maintenance\OutstandingBalanceAsOf.rdlc" />
+    <EmbeddedResource Include="Maintenance\ProcessingSheet.rdlc" />
+    <EmbeddedResource Include="Members\List.rdlc" />
+    <EmbeddedResource Include="PaymentOrder\Loans.rdlc" />
+    <EmbeddedResource Include="PaymentOrder\Lri.rdlc" />
+    <EmbeddedResource Include="Payroll\AdvancePayments.rdlc" />
+    <EmbeddedResource Include="Payroll\Advice.rdlc" />
+    <EmbeddedResource Include="Payroll\NoDeductionRegister.rdlc" />
+    <EmbeddedResource Include="Payroll\PayrollDeductionRegisterDetails.rdlc" />
+    <EmbeddedResource Include="Payroll\PayrollDeductionRegisterSummary.rdlc" />
+    <EmbeddedResource Include="Payroll\Stop.rdlc" />
+    <EmbeddedResource Include="Adhoc\TotalExposure.rdlc" />
+    <EmbeddedResource Include="Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher\LoansPayment.rdlc" />
+    <EmbeddedResource Include="Voucher\PayrollDeduction.rdlc" />
+    <EmbeddedResource Include="Voucher\Release.rdlc" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.Arrears.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.MiscellaneousLiability.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.MissedPayments.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.Refund.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.Remit.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.Runup.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Adhoc.TotalExposure.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.DailyTransactionRegister.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.DailyTransactionRegisterDetails.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.DailyTransactionRegisterSummary.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.FullyPaidLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.InterestDetails.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.InterestSummary.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.MonthlyRunup.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.MonthlyRunupBreakdown.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.MonthlyRunupConsolidation.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.ReleasedLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.ReversedTransactionRegisterDetails.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.ReversedTransactionRegisterSummary.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.StaffPtlBalance.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.StaffPtlInterestPaid.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.TotalInterestPaid.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Admin.TotalInterestPaidByRange.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.CashDividend.Register.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.AmortizationSchedule.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.CashDisbursementOrder.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.FullyPaidLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.KbciDeductionRegister.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.LoanArrears.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.LoansDue.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.PaymentRegister.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.PreterminatedLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.ReleasedLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.RestructuredLoans.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.SavingsAccountTransactionRegister.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.StaffPayment.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.SubsidiaryLoanLedgerBody.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.SubsidiaryLoanLedgerHeader.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Loans.TransactionSchedule.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Lri.Collection.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Lri.Deduction.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Lri.Due.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Maintenance.LoansStatementBody.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Maintenance.LoansStatementHeader.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Maintenance.OutstandingBalance.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Maintenance.OutstandingBalanceAsOf.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Maintenance.ProcessingSheet.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Members.List.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.PaymentOrder.LoansBody.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.PaymentOrder.LoansHeader.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.PaymentOrder.Lri.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.AdvancePayments.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.Advice.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.NoDeductionRegister.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.PayrollDeductionRegisterDetails.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.PayrollDeductionRegisterSummary.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Payroll.Stop.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Voucher.LoansPaymentBody.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Voucher.LoansPaymentHeader.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Voucher.PayrollDeduction.datasource" />
+    <None Include="Properties\DataSources\Loan.Application.Report.Voucher.Release.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loan.Application.Infrastructure\Loan.Application.Infrastructure.csproj">
+      <Project>{A5C96519-ECD5-4443-B015-8B4CF9039B65}</Project>
+      <Name>Loan.Application.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

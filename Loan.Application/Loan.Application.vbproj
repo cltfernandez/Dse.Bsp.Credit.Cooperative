@@ -1,0 +1,482 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6494D0FC-75AB-4E55-BCF3-9888B07CF2CC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Loan.Application</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Loan.Application</RootNamespace>
+    <StartupObject>Loan.Application.Master</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/KBCI_LOANS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Loan.Application.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Loan.Application.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="S_Cryptography, Version=1.0.3411.30469, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="S_Database, Version=1.0.3530.3947, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="KBCI_LOANS" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Objects.vb" />
+    <Compile Include="Business\Rules\Administration.vb" />
+    <Compile Include="Business\Rules\Loans.vb" />
+    <Compile Include="Business\Popups.vb" />
+    <Compile Include="Business\Rules\Payroll.vb" />
+    <Compile Include="Class\BackgroundProcess.vb" />
+    <Compile Include="Controls\UserControls\PropertyDataGrid.Designer.vb">
+      <DependentUpon>PropertyDataGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\PropertyDataGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControls\SearchAndSelect.Designer.vb">
+      <DependentUpon>SearchAndSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\SearchAndSelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu\Loans\LoanRelease.Designer.vb">
+      <DependentUpon>LoanRelease.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu\Loans\LoanRelease.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu\Loans\LoanPayment.Designer.vb">
+      <DependentUpon>LoanPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu\Loans\LoanPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupPasswordChange.Designer.vb">
+      <DependentUpon>PopupPasswordChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupPasswordChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Class\Business\LoanAdjustingEntries.vb" />
+    <Compile Include="Obsolete\Class\Business\LoanPayment.vb" />
+    <Compile Include="Obsolete\Class\Business\LoanReleaseInsurance.vb" />
+    <Compile Include="Obsolete\Class\Business\LoanRestructuring.vb" />
+    <Compile Include="Obsolete\Class\Business\LoanReversion.vb" />
+    <Compile Include="Obsolete\Class\Business\LoanStaffPayment.vb" />
+    <Compile Include="Obsolete\Class\Business\Maintenance.vb" />
+    <Compile Include="Common.vb" />
+    <Compile Include="Data\Database.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Class\Enumeration.vb" />
+    <Compile Include="Obsolete\KbciForms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Class\Business\LoanApplication.vb">
+    </Compile>
+    <Compile Include="Data\OleDB.vb" />
+    <Compile Include="Obsolete\Class\RowWrapper.vb" />
+    <Compile Include="Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupAuthenticate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Maintenance\SqlTableEditor.Designer.vb">
+      <DependentUpon>SqlTableEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Maintenance\SqlTableEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupSearchDr.Designer.vb">
+      <DependentUpon>PopupSearchDr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popups\PopupSearchDr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanAdjustingEntries.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationBreakdown.Designer.vb">
+      <DependentUpon>LoanApplicationBreakdown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationBreakdown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationOdedbalDetail.Designer.vb">
+      <DependentUpon>LoanApplicationOdedbalDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationOdedbalDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationSdedbal.Designer.vb">
+      <DependentUpon>LoanApplicationSdedbal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationSdedbal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanPastDueMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanRestructuring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanRestructuringSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanReversion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanStaffPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationOdedbal.Designer.vb">
+      <DependentUpon>LoanApplicationOdedbal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Loans\LoanApplicationOdedbal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Maintenance\LoanMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Maintenance\PasswordChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Others\LriMaintenance.Designer.vb">
+      <DependentUpon>LriMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Others\LriMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Payroll\PayrollAdvancePaymentsMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Others\MemberForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Payroll\PayrollAdditional.Designer.vb">
+      <DependentUpon>PayrollAdditional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obsolete\Menu\Payroll\PayrollAdditional.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemObjects.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\UserControls\SearchAndSelect.resx">
+      <DependentUpon>SearchAndSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu\Loans\LoanRelease.resx">
+      <DependentUpon>LoanRelease.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu\Loans\LoanPayment.resx">
+      <DependentUpon>LoanPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupPasswordChange.resx">
+      <DependentUpon>PopupPasswordChange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\KbciForms.resx">
+      <DependentUpon>KbciForms.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupAuthenticate.resx">
+      <DependentUpon>PopupAuthenticate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Maintenance\SqlTableEditor.resx">
+      <DependentUpon>SqlTableEditor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popups\PopupSearchDr.resx">
+      <DependentUpon>PopupSearchDr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanApplicationOld.resx">
+      <DependentUpon>LoanApplicationOld.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanAdjustingEntries.resx">
+      <DependentUpon>LoanAdjustingEntries.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanApplicationBreakdown.resx">
+      <DependentUpon>LoanApplicationBreakdown.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanApplicationOdedbalDetail.resx">
+      <DependentUpon>LoanApplicationOdedbalDetail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanApplicationSdedbal.resx">
+      <DependentUpon>LoanApplicationSdedbal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanPastDueMaintenance.resx">
+      <DependentUpon>LoanPastDueMaintenance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanPayment.resx">
+      <DependentUpon>LoanPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanRestructuring.resx">
+      <DependentUpon>LoanRestructuring.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanRestructuringSummary.resx">
+      <DependentUpon>LoanRestructuringSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanReversion.resx">
+      <DependentUpon>LoanReversion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanStaffPayment.resx">
+      <DependentUpon>LoanStaffPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Loans\LoanApplicationOdedbal.resx">
+      <DependentUpon>LoanApplicationOdedbal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Maintenance\LoanMonitoring.resx">
+      <DependentUpon>LoanMonitoring.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Maintenance\PasswordChange.resx">
+      <DependentUpon>PasswordChange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Others\LriMaintenance.resx">
+      <DependentUpon>LriMaintenance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Payroll\PayrollAdvancePaymentsMaintenance.resx">
+      <DependentUpon>PayrollAdvancePaymentsMaintenance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Others\MemberForm.resx">
+      <DependentUpon>MemberForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obsolete\Menu\Payroll\PayrollAdditional.resx">
+      <DependentUpon>PayrollAdditional.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Images\add.png" />
+    <Content Include="Images\BSP_Main.png" />
+    <None Include="Images\cancel.png" />
+    <None Include="Images\delete.png" />
+    <None Include="Images\edit.png" />
+    <None Include="Images\close.png" />
+    <None Include="Images\BSP_th.png" />
+    <Content Include="Images\button.jpg" />
+    <Content Include="Images\footerb.gif" />
+    <Content Include="Images\wmark2.png" />
+    <None Include="Images\wmark3.png" />
+    <None Include="Images\submit.png" />
+    <None Include="Images\search.png" />
+    <None Include="Images\process.png" />
+    <None Include="Images\open.png" />
+    <None Include="Images\save.png" />
+    <None Include="Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jc.Scripts\Jc.Scripts.csproj">
+      <Project>{FA2C8530-E23E-4BFA-A6C4-BB5C4847BD04}</Project>
+      <Name>Jc.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loan.Application.Domain\Loan.Application.Domain.csproj">
+      <Project>{44A2965D-C93B-47E3-8449-7A50CC90B006}</Project>
+      <Name>Loan.Application.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loan.Application.Infrastructure\Loan.Application.Infrastructure.csproj">
+      <Project>{A5C96519-ECD5-4443-B015-8B4CF9039B65}</Project>
+      <Name>Loan.Application.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loan.Application.Report\Loan.Application.Report.csproj">
+      <Project>{8B817ECF-AD20-4F14-B9B3-22D20C0E5099}</Project>
+      <Name>Loan.Application.Report</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
